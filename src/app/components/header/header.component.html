@@ -1,0 +1,125 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="[ '/home' ]">Home</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/menu/pizza']">pizza</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/menu/salad' ]">salad</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/menu/drinks' ]">drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="[ '/blog' ]">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="[ '/about' ]">about</a>
+                </li>
+            </ul>
+        </div>
+        <div class="userSection">
+            <div class="headerSection header-cart">
+                <a [routerLink]="[ '/basket' ]" class="basket">
+                    <i class="uil uil-shopping-cart"></i>
+                    <span class="basketPrice">{{ totalPrice }}грн</span>
+                </a>
+            </div>
+            <div class="signing">
+                <div class="navbar-nav">
+                    <a class="nav-link" *ngIf="isAdmin" [routerLink]="[ '/admin' ]">admin</a>
+                    <a class="nav-link" *ngIf="isUser" [routerLink]="[ '/profile' ]"><img [attr.src]='userImage'></a>
+                </div>
+                <div class="navbar-nav" class="signing">
+                    <a class="nav-link" *ngIf="!isLogin" (click)="openModal(signUp, modalLG)">sign up</a>
+                    <span class='line' *ngIf="!isLogin">|</span>
+                    <a class="nav-link" *ngIf="!isLogin" (click)="openModal(signIn, modalMD)">log in</a>
+                    <a class="nav-link" *ngIf="isLogin" (click)="signOUT()">sign out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<ng-template #signIn>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sign in</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span class="close" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input [(ngModel)]="userEmail" name="userEmail" type="email" class="form-control" id="userEmail">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input [(ngModel)]="userPassword" name="userPassword" type="password" class="form-control"
+                        id="userPassword">
+                </div>
+                <button (click)="signIN()" type="button" class="btn btn-dark">Sign In</button>
+            </form>
+        </div>
+    </div>
+</ng-template>
+<ng-template #signUp>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Sign up</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span class="close" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="userFName">First name</label>
+                    <input type="text" [(ngModel)]="userFName" name='userFName' id='userFName' class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userLName">Last name</label>
+                    <input type="text" [(ngModel)]="userLName" name='userLName' id='userLName' class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userPhoneNumber">Phone number</label>
+                    <input type="text" [(ngModel)]="userPhoneNumber" name='userPhoneNumber' id='userPhoneNumber'
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input [(ngModel)]="userEmail" name="userEmail" type="email" class="form-control" id="userEmail">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input [(ngModel)]="userPassword" name="userPassword" type="password" class="form-control"
+                        id="userPassword">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="userImage" (change)="uploadFile($event)">
+                        <label class="custom-file-label" for="userImage">Choose file</label>
+                    </div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped bg-dark" role="progressbar"
+                        [style.width]="(uploadPercent | async) + '%'" aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="alert alert-dark" role="alert" *ngIf="isLoaded">
+                    File uploaded. Now you can add product.
+                </div>
+                <button (click)="signUP()" type="button" class="btn btn-dark">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</ng-template>

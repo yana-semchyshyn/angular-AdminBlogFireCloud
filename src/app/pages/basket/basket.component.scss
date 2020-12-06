@@ -1,0 +1,89 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+i{
+    font-size: 45px;
+    color: #4c5055;
+}
+i:hover{
+    color: black;
+}
+td, th, input{
+  text-align: center;
+}
+td{
+    vertical-align: middle;
+    font-size: 20px;
+}
+.count{
+    width: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.deleteModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        margin-right: 5px;
+        width: 130px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 1020px) and (min-width: 760px){
+    td{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 770px) and (min-width: 480px){
+    .container{
+        margin: 10px;
+        td{
+            font-size: 16px;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+            i{
+                font-size: 35px;
+            }
+            h4{
+                font-size: 24px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 460px) and (min-width: 300px){
+    .container{
+        margin: 0;
+        padding: 0;
+        th{
+            font-size: 14px;
+        }
+        td{
+            font-size: 14px;
+            padding: 10px 5px;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            i{
+                font-size: 25px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .count{
+            width: 68px;
+            button{
+                padding: 3px 6px;
+            }
+            input{
+                width: 27px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.dark-mode-text{
+    color: #343a40;
+}
+
+.dark-mode{
+    background-color: #343a40;
+    color: #fefefe;
+}
+a.card-title{
+    min-width: 40px;
+}
+
+i{
+    color: #c80000;
+}
+a:hover{
+    color: #c80000;
+}
+@media screen and (max-width: 560px) and (min-width: 300px){
+    .productDescription{
+        padding: 0 45px;
+    }
+}

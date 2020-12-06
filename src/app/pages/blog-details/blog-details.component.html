@@ -1,0 +1,13 @@
+<div class="col-12">
+    <div class="row">
+        <div class="image_box">
+            <img [attr.src]="blog?.image" alt="">
+        </div>
+        <div class="info">
+            <p style="color: #188cda">{{blog?.date.toDate() | date: 'MMM d, yyyy' | uppercase }} {{blog?.author | uppercase }}</p>
+            <h3>{{blog?.title}}</h3>
+            <p style="white-space: pre-line" class="blog-text">{{blog?.text}}</p>
+        </div>
+    </div>
+    <i class="uil uil-arrow-circle-left" (click)="location.back()"></i>
+</div>

@@ -1,0 +1,21 @@
+<div class="col-12">
+    <div class="row">
+        <div class="image_box">
+            <img [attr.src]="product?.image" alt="">
+        </div>
+        <div class="info">
+            <h3>{{product?.name}}</h3>
+            <p>{{product?.description}}</p>
+            <div class="productPriceInfo">
+                <p class="price">{{ product?.price * product?.count }} грн</p>
+                <div class="productCountWrapper">
+                    <span class="productCount lessProduct" (click)="productCount(product, false)"></span>
+                    <input type="text" maxlength="3" [value]="product?.count">
+                    <span class="productCount moreProduct" (click)="productCount(product, true)"></span>
+                </div>
+            </div>
+            <div (click)="addToBasket(product)" class="button add-to-cart-product">Замовити</div>
+        </div>
+    </div>
+    <i class="uil uil-arrow-circle-left" (click)="location.back()"></i>
+</div>

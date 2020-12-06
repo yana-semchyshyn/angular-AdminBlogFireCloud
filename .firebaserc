@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "july-70f07": {
+      "hosting": {
+        "AngularAdminBlog": [
+          "july-70f07"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="profileHeader">
+        <div class="images">
+            <img [attr.src]='userImage'>
+            <div type='button' (click)="openModal(editImg, modalSM)" class="edit"><i class="uil uil-image-edit"></i></div>
+        </div>  
+    </div>
+    <div class="basicInfo">
+        <p>Full name: <span>{{userFName}} {{userLName}}</span></p>
+        <p>Email: <span>{{userEmail}}</span></p>
+        <p>Phone number: <span>{{userPhoneNumber}}</span></p>
+    </div>
+</div>
+<ng-template #editImg>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Account photo editing</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span class="close" aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="userImage" (change)="uploadFile($event)">
+                    <label class="custom-file-label" for="userImage">Choose file</label>
+                </div>
+            </div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped bg-dark" role="progressbar"
+                    [style.width]="(uploadPercent | async) + '%'" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <div class="alert alert-dark" role="alert" *ngIf="isLoaded">
+                File uploaded. Now you can add product.
+            </div>
+            <button (click)="updateUserData()" type="button" class="btn btn-dark">Save</button>
+        </form>
+    </div>
+</ng-template>

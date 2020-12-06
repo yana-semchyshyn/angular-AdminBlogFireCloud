@@ -1,0 +1,17 @@
+<div class="box">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let blog of userBlogs">
+      <div class="card">
+        <a [routerLink]="[ '/blog', blog.id ]" class="card-title"><img [src]="blog.image" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <div>
+            <p>{{ blog.date.toDate() | date: 'MMM d, yyyy' | uppercase }}</p>
+            <p>{{blog.author | uppercase }}</p>
+          </div>
+          <a [routerLink]="[ '/blog', blog.id ]" class="card-title">{{ blog.title }}</a>
+          <p class="card-text">{{ blog.text | truncateText:150  }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

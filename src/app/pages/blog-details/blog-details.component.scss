@@ -1,0 +1,111 @@
+.col-12{
+    height: 80vh;
+    position: relative;
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .image_box{
+            width: 37%;
+            height: 60vh;
+            margin-left: 50px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.info{
+    margin-right: 50px;
+    margin-top: 30px;
+    width: 50%;
+    min-height: 70%;
+    font-size: 18px;
+}
+i{
+    position: absolute;
+    top: 73%;
+    left: 28px;
+    font-size: 55px;
+    color: rgb(76, 80, 85);
+}
+i:hover{
+    color: black;
+}
+@media screen and (max-width: 1100px) and (min-width: 860px){
+    h3{
+        font-size: 30px;
+    }
+    .image_box{
+        width: 33%;
+        height: 50vh;
+        margin-left: 50px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width: 870px) and (min-width: 500px){
+    .col-12{
+        .row{
+            flex-direction: column;
+            .image_box{
+                width: 75%;
+                height: 50vh;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            .info{
+                width: 75%;
+                min-height: 30vh;
+                margin: 0 auto;
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    i{
+        top: 100%;
+        left: 0;
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 570px) and (min-width: 300px){
+    .col-12{
+        .row{
+            .image_box{
+                width: 70%;
+                height: 40vh;
+            }
+            .info{
+                width: auto;
+                margin-top: 10px;
+                margin-left: 50px;
+                h3{
+                    font-size: 22px;
+                }
+                p{
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+                .blog-text{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    i{
+        top: 100%;
+        left: 0;
+        font-size: 45px;
+    }
+    h4{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,92 @@
+i {
+   font-size: 30px;
+   color: white;
+}
+span{
+    font-size: 16px;
+    color: white;
+}
+#menuToggle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    button{
+        width: 60px;
+        height: 40px;
+    }
+}
+h6{
+    color: #DC3545;
+    text-align: center;
+}
+.checkUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        margin-right: 5px;
+        width: 130px;
+        height: 50px;
+    }
+}
+.basketPrice{
+ color: white;
+}
+.close{
+    color: black;
+}
+.line{
+    color: rgba(255,255,255,.5);
+    line-height: 40px;
+}
+input{
+    height: 40px;
+}
+.basket{
+    display: flex;
+    flex-direction: column;
+    i{
+        height: 32px;
+    }
+    span{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+img{
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+nav{
+    position: relative;
+}
+.userSection, .signing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 10px;
+}
+.userSection{
+    position: absolute;
+}
+.signing{
+    margin-left: 10px;
+    width: 125px;
+    a{
+        padding: 0;
+        color: rgba(255,255,255,.5);
+    }
+    a:hover{
+        color: rgba(255,255,255,.75);
+    }
+    span{
+        margin: 0 7px;
+    }
+}

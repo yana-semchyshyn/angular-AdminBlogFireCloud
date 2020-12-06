@@ -1,0 +1,144 @@
+{
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Приведи другa",
+      "text": "Отримайте 100 грн за… дружню пораду!\n\nЯкщо ваш друг, зробить у нас замовлення завдяки вашим рекомендаціям, то ви обоє гарантовано отримаєте по 100 грн.\n\nУмови акції:\n– Зареєструватися на нашому сайті та згенерувати унікальне реферальне посилання;\n– Надіслати його будь-яким зручним способом своєму другу або декільком друзям;\n– Якщо друг*, перейшовши по посиланню, зробить замовлення, то відразу отримає гарантовану знижку 100 грн;\n– У своєму кабінеті ви побачите нараховані 100 бонусів, які можна використовувати для розрахунку за своє замовлення. Бонуси нараховуються протягом доби з моменту отримання другом замовлення.\n– Мінімальна сума замовлення має складати 150 грн в Зеленій зоні та 250 грн в Жовтій;\n– Дана акція не поєднується з іншими акціями;\n– Можна запрошувати безліч друзів і збільшувати кількість бонусів))\n\n*Друг або новий друг – це той, хто ще жодного разу не робив у нас замовлення. Перевірка здійснюється по номеру телефону.",
+      "date": "2020-11-29T16:38:11.910Z",
+      "author": "admin",
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2Fbring-a-friend-small.jpg?alt=media&token=0f736a15-27b5-4a9d-b7dc-6143138a0bb7"
+    },
+    {
+      "title": "Наша фірмова акція \"2+1\"",
+      "text": "Акція «2+1» діє в понеділок, вівторок, середу та четвер. Замовляйте дві піци та отримуйте ще одну безкоштовно!\n\n",
+      "date": "2020-11-28T13:25:44.244Z",
+      "author": "Yana Semchyshyn",
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2Faktsiya-dlya-sajta-21.jpg?alt=media&token=684148b5-bd7e-4a74-8e80-5bb3e3a9fff8",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "pizza"
+    },
+    {
+      "id": 2,
+      "name": "salad"
+    },
+    {
+      "name": "drinks",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 3,
+      "category": {
+        "name": "drinks",
+        "id": 3
+      },
+      "name": "Апельсиновий нектар",
+      "description": "Апельсиновий нектар з м'якоттю, 1 л, ТМ “RICH”",
+      "price": 42,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2Frich_orange.jpg?alt=media&token=a6c3bfe5-3a09-459b-929e-c242fe77961d"
+    },
+    {
+      "id": 4,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Піца La П’єц",
+      "description": "соус томатний, шинка, баварські ковбаски, сир моцарела, ковбаса салямі, прошуто.",
+      "price": 177,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FLA-P_yets-1.png?alt=media&token=e7b434b7-7338-4134-aa87-1dd52c8553c9"
+    },
+    {
+      "id": 5,
+      "category": {
+        "id": 1,
+        "name": "pizza"
+      },
+      "name": "Капрічоза",
+      "description": "соус томатний, сир моцарела, шинка, свіжі гриби.",
+      "price": 161,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FKaprichoza-1.png?alt=media&token=1d747c91-ae5f-4827-8395-394ef6947b67"
+    },
+    {
+      "category": {
+        "name": "pizza",
+        "id": 1
+      },
+      "name": "Цезаріо",
+      "description": "соус вершковий, помідори, хрусткий салат, пармезан, куряче м'ясо, сир моцарела, перепелині яйця.",
+      "price": 202,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FTSezario-1.png?alt=media&token=2f9f6b58-4e45-43b4-ba3f-dca627bb4e6c",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "category": {
+        "name": "drinks",
+        "id": 3
+      },
+      "name": "Coca Cola",
+      "description": "Coca Cola — 0,5 л",
+      "price": 24,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2Fcola0.5.jpg?alt=media&token=3bb00946-7371-4993-a53b-2d29858d15fa"
+    },
+    {
+      "category": {
+        "name": "drinks",
+        "id": 3
+      },
+      "name": "Екзотик Нектар",
+      "description": "Екзотик Нектар, 1 л, ТМ “RICH”",
+      "price": 42,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2Frich_ekzotic.jpg?alt=media&token=70f561d4-c62a-4051-a6ff-049fa6982843",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "category": {
+        "id": 2,
+        "name": "salad"
+      },
+      "name": "Салат Цезар",
+      "description": "Салат айсберг, помідори, куряче м`ясо, сир пармезан, перепелині яйця, духмяні сухарики та фірмова заправка - соус «Цезар».",
+      "price": 135,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FTSezar-z-kurkoyu.png?alt=media&token=592524c5-db73-4266-b6cb-48f3e93efb65"
+    },
+    {
+      "id": 10,
+      "category": {
+        "id": 2,
+        "name": "salad"
+      },
+      "name": "Ді Сальмоне",
+      "description": "рукола, помідор чері, огірок, салат айсберг, соус айолі, пармезан, лосось, перепелине яйце, кунжут.",
+      "price": 144,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FInsalata-di-Salmone1.png?alt=media&token=bc5f5910-559c-46b8-a3c1-60ebaf35c669"
+    },
+    {
+      "category": {
+        "id": 2,
+        "name": "salad"
+      },
+      "name": "Прімавера",
+      "description": "сир моцарела, салат айсберг, помідор чері, огірок, болгарський перець, оливкова олія, фреш лимонний, орегано.",
+      "price": 109,
+      "count": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/july-70f07.appspot.com/o/images%2FPrimavera-big-1.jpg?alt=media&token=a08665eb-b414-47ed-a07a-6bd5dfbc8382",
+      "id": 11
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<div class="container cnt1">
+    <p>Category</p>
+    <button type="button" class="btn btn-dark" (click)="openModal(open, modalCenter)">Add</button>
+</div>
+<div class="container cnt2">
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="filter category.." [(ngModel)]="searchName" name="searchName">
+        </div>
+    </form>
+    <hr>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col" style="width:3%">#</th>
+                <th scope="col" style="width:83%" colspan="2">Name</th>
+                <th scope="col" style="width:7%;">Edit</th>
+                <th scope="col" style="width:7%">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cat of categories | search: searchName; let i=index">
+                <td>{{ i+1 }}</td>
+                <td colspan="2">{{ cat.name }}</td>
+                <td>
+                    <button (click)="editCategory(cat)" (click)="openModal(open, modalCenter)" class="btn btn-dark">edit</button>
+                </td>
+                <td>
+                    <button (click)="openModal(delete, modalSM)" (click)="getCategory(cat)" class="btn btn-dark">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #open>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Modal title</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()" (click)="resetForm()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <input type="text" class="form-control" [(ngModel)]="categoryName" name="categoryName" placeholder="name here...">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="modalRef.hide()" (click)="resetForm()">Close</button>
+            <button *ngIf="!isEdited" type="button" class="btn btn-dark" (click)="addCategory()">Add</button>
+            <button *ngIf="isEdited" (click)="updateCategory()" type="button" class="btn btn-dark">Save edit</button>
+        </div>
+</ng-template>
+<ng-template #delete>
+    <div class="modal-body deleteModal">
+        <button type="button" class="btn btn-dark" (click)="modalRef.hide()">Dismiss</button>
+        <button type="button" (click)="deleteCategory(category)" class="btn btn-danger">Delete</button>
+    </div>
+</ng-template>

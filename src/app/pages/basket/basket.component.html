@@ -1,0 +1,41 @@
+<div class="container" style="margin: 0 auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th scope="col">Count</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of basket; let i=index">
+                <td style="width: 170px;"><img [attr.src]='prod.image'></td>
+                <td>{{ prod.name }}</td>
+                <td>{{ prod.price }} грн</td>
+                <td>{{ prod.price * prod.count }} грн</td>
+                <td>
+                    <div class="count">
+                        <button (click)="productCount(prod, false)" class="btn btn-dark">-</button>
+                        <input type="text" maxlength="3" [value]="prod.count">
+                        <button (click)="productCount(prod, true)" class="btn btn-dark">+</button>
+                    </div>
+                </td>
+                <td><i class="uil uil-trash-alt" (click)="openModal(delete, modalSM)" (click)="getProduct(prod)"></i></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <h4 class="text-right text-danger">До оплати: {{ totalPrice }} грн</h4>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #delete>
+    <div class="modal-body deleteModal">
+        <button type="button" class="btn btn-dark" (click)="modalRef.hide()">Dismiss</button>
+        <button type="button" (click)="removeProduct(product)" class="btn btn-danger">Delete</button>
+    </div>
+</ng-template>
